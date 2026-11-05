@@ -1,1 +1,1 @@
-ee0dd926d28765d8b23eba68f936da6b8328dba5c6d1c9a07eebd90c17da7565  windows/Iqra-Setup-1.5.4-32bits.exe
+96aea769204681b89ce2e106af0eb9788aaa36e1adfed8c8e7933fe1997cab29  Iqra-Setup-1.6.0-32bits.exe
