@@ -13,7 +13,7 @@ Une application **Sensei Dev**.
 
 ## Télécharger (version 1.6.0)
 
-**[⬇ Télécharger Iqra pour Windows (85 Mo)](https://github.com/knfanew-ux/iqra/raw/main/windows/Iqra-Setup-1.6.0-32bits.exe)**
+**[⬇ Télécharger Iqra pour Windows (91 Mo)](https://github.com/knfanew-ux/iqra/raw/main/windows/Iqra-Setup-1.6.0-32bits.exe)**
 
 Cette version fonctionne sur tous les ordinateurs Windows 10 et 11, en 32 comme en 64 bits.
 
