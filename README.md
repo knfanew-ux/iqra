@@ -11,14 +11,14 @@ Application Windows pour apprendre à lire le Coran avec la bonne prononciation,
 
 Une application **Sensei Dev**.
 
-## Télécharger (version 1.6.3)
+## Télécharger (version 1.7.0)
 
 Choisissez la version qui correspond à votre ordinateur :
 
 | Ordinateur | Télécharger | Taille |
 | --- | --- | --- |
-| **Windows 64 bits** (la plupart des PC récents) | [⬇ Iqra-Setup-1.6.3.exe](https://github.com/knfanew-ux/iqra/releases/download/v1.6.3/Iqra-Setup-1.6.3.exe) | 114 Mo |
-| **Windows 32 bits** (fonctionne aussi sur 64 bits) | [⬇ Iqra-Setup-1.6.3-32bits.exe](https://github.com/knfanew-ux/iqra/raw/main/windows/Iqra-Setup-1.6.3-32bits.exe) | 94 Mo |
+| **Windows 64 bits** (la plupart des PC récents) | [⬇ Iqra-Setup-1.6.3.exe](https://github.com/knfanew-ux/iqra/releases/download/v1.6.3/Iqra-Setup-1.6.3.exe) (1.7.0 en cours de publication) | 114 Mo |
+| **Windows 32 bits** (fonctionne aussi sur 64 bits) | [⬇ Iqra-Setup-1.7.0-32bits.exe](https://github.com/knfanew-ux/iqra/raw/main/windows/Iqra-Setup-1.7.0-32bits.exe) | 94 Mo |
 
 **32 ou 64 bits ?** Ouvrez *Paramètres → Système → Informations système* et regardez « Type du système ». En cas de doute, prenez la version 32 bits : elle fonctionne partout.
 
@@ -32,6 +32,7 @@ Windows 10 ou 11. Internet est nécessaire pour l'audio des versets et des mots 
 
 ## Nouveautés
 
+**1.7.0** — Nouveau mode « Muṣḥaf tajwîd » : le texte arabe seul, coloré selon les règles. Iqra signale désormais au démarrage qu'une nouvelle version est disponible.
 **1.6.3** — Le tashahhud de ʿUmar (formule malikite) se fait entendre avec une seule voix ; « Écouter » n'apparaît que si tous les mots ont un son.
 **1.6.2** — Voix des invocations et de la prière plus claire : souffle réduit, voix plus présente, volume égal, sans saturation.
 **1.6.0** — Modules « La prière » et « Invocations », avec l'audio mot par mot des invocations.
