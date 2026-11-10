@@ -1,0 +1,64 @@
+{
+  "name": "iqra-coran",
+  "version": "1.7.0",
+  "description": "Apprendre à lire le Coran avec la bonne prononciation",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win nsis --x64"
+  },
+  "author": "Iqra",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@fontsource/amiri-quran": "^5.3.0",
+    "@fontsource/inter": "^5.3.0",
+    "electron": "^45.2.1",
+    "electron-builder": "^26.18.0",
+    "resedit": "^2.0.3"
+  },
+  "productName": "Iqra",
+  "build": {
+    "appId": "ci.iqra.coran",
+    "productName": "Iqra",
+    "copyright": "Iqra",
+    "files": [
+      "main.js",
+      "src/**/*",
+      "build/icon.png",
+      "package.json"
+    ],
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build/icon.ico",
+      "signAndEditExecutable": false
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Iqra - Apprendre le Coran",
+      "installerIcon": "build/icon.ico",
+      "uninstallerIcon": "build/icon.ico",
+      "language": "1036",
+      "artifactName": "Iqra-Setup-${version}.exe"
+    },
+    "electronLanguages": [
+      "fr",
+      "en-US",
+      "ar"
+    ]
+  }
+}

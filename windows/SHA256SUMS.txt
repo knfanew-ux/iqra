@@ -1,1 +1,1 @@
-5d5214a6b9531fdd53017124e60ea04e84b670f228a80caeca7574ce8cb542f7  Iqra-Setup-1.6.3-32bits.exe
+5e2bd3dfdafab000952baa30213e14c984d5f055e8cc3db231c330e6e7eaed76  Iqra-Setup-1.7.0-32bits.exe
