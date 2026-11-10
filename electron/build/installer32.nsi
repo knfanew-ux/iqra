@@ -5,7 +5,7 @@ RequestExecutionLevel user
 
 !define APPNAME "Iqra"
 !define APPLONG "Iqra - Apprendre le Coran"
-!define VERSION "1.7.0"
+!define VERSION "1.7.1"
 !define REGKEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\IqraCoran"
 
 Name "${APPNAME} — Apprendre à lire le Coran"
@@ -14,7 +14,7 @@ InstallDir "$LOCALAPPDATA\Programs\Iqra"
 InstallDirRegKey HKCU "Software\IqraCoran" "InstallDir"
 BrandingText "Iqra ${VERSION}"
 
-VIProductVersion "1.7.0.0"
+VIProductVersion "1.7.1.0"
 VIAddVersionKey /LANG=1036 "ProductName" "Iqra"
 VIAddVersionKey /LANG=1036 "FileDescription" "Installation de Iqra — Apprendre à lire le Coran"
 VIAddVersionKey /LANG=1036 "FileVersion" "${VERSION}"
