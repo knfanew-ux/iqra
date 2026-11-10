@@ -1,6 +1,6 @@
 {
   "name": "iqra-coran",
-  "version": "1.7.1",
+  "version": "1.7.2",
   "description": "Apprendre à lire le Coran avec la bonne prononciation",
   "main": "main.js",
   "scripts": {

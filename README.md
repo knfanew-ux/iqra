@@ -11,14 +11,14 @@ Application Windows pour apprendre à lire le Coran avec la bonne prononciation,
 
 Une application **Sensei Dev**.
 
-## Télécharger (version 1.7.1)
+## Télécharger (version 1.7.2)
 
 Choisissez la version qui correspond à votre ordinateur :
 
 | Ordinateur | Télécharger | Taille |
 | --- | --- | --- |
-| **Windows 64 bits** (la plupart des PC récents) | [⬇ Iqra-Setup-1.7.1.exe](https://github.com/knfanew-ux/iqra/releases/download/v1.7.1/Iqra-Setup-1.7.1.exe) | 116 Mo |
-| **Windows 32 bits** (fonctionne aussi sur 64 bits) | [⬇ Iqra-Setup-1.7.1-32bits.exe](https://github.com/knfanew-ux/iqra/raw/main/windows/Iqra-Setup-1.7.1-32bits.exe) | 96 Mo |
+| **Windows 64 bits** (la plupart des PC récents) | [⬇ Iqra-Setup-1.7.2.exe](https://github.com/knfanew-ux/iqra/releases/download/v1.7.2/Iqra-Setup-1.7.2.exe) | 116 Mo |
+| **Windows 32 bits** (fonctionne aussi sur 64 bits) | [⬇ Iqra-Setup-1.7.2-32bits.exe](https://github.com/knfanew-ux/iqra/raw/main/windows/Iqra-Setup-1.7.2-32bits.exe) | 96 Mo |
 
 **32 ou 64 bits ?** Ouvrez *Paramètres → Système → Informations système* et regardez « Type du système ». En cas de doute, prenez la version 32 bits : elle fonctionne partout.
 
@@ -31,6 +31,8 @@ Windows 10 ou 11. Internet est nécessaire pour l'audio des versets et des mots 
 3. Suivez l'assistant : aucun droit administrateur n'est demandé. Un raccourci est créé sur le Bureau et dans le menu Démarrer.
 
 ## Nouveautés
+
+**1.7.2** — Les rubriques Prière et Invocations ne citent plus de noms d'écoles : les autres avis sont présentés comme « autres avis » ou « d'autres savants ».
 
 **1.7.1** — Le film de présentation d'Iqra est intégré : il se lance au premier démarrage (avec un bouton Son) et se revoit dans Réglages › À propos.
 
