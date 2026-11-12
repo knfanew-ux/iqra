@@ -11,14 +11,14 @@ Application Windows pour apprendre à lire le Coran avec la bonne prononciation,
 
 Une application **Sensei Dev**.
 
-## Télécharger (version 1.7.4)
+## Télécharger (version 1.7.5)
 
 Choisissez la version qui correspond à votre ordinateur :
 
 | Ordinateur | Télécharger | Taille |
 | --- | --- | --- |
-| **Windows 64 bits** (la plupart des PC récents) | [⬇ Iqra-Setup-1.7.4.exe](https://github.com/knfanew-ux/iqra/releases/download/v1.7.4/Iqra-Setup-1.7.4.exe) | 116 Mo |
-| **Windows 32 bits** (fonctionne aussi sur 64 bits) | [⬇ Iqra-Setup-1.7.4-32bits.exe](https://github.com/knfanew-ux/iqra/raw/main/windows/Iqra-Setup-1.7.4-32bits.exe) | 96 Mo |
+| **Windows 64 bits** (la plupart des PC récents) | [⬇ Iqra-Setup-1.7.5.exe](https://github.com/knfanew-ux/iqra/releases/download/v1.7.5/Iqra-Setup-1.7.5.exe) | 116 Mo |
+| **Windows 32 bits** (fonctionne aussi sur 64 bits) | [⬇ Iqra-Setup-1.7.5-32bits.exe](https://github.com/knfanew-ux/iqra/raw/main/windows/Iqra-Setup-1.7.5-32bits.exe) | 96 Mo |
 
 **32 ou 64 bits ?** Ouvrez *Paramètres → Système → Informations système* et regardez « Type du système ». En cas de doute, prenez la version 32 bits : elle fonctionne partout.
 
@@ -31,6 +31,8 @@ Windows 10 ou 11. Internet est nécessaire pour l'audio des versets et des mots 
 3. Suivez l'assistant : aucun droit administrateur n'est demandé. Un raccourci est créé sur le Bureau et dans le menu Démarrer.
 
 ## Nouveautés
+
+**1.7.5** — Version de sécurité : Iqra n'ouvre plus que des liens https, dans votre navigateur ; Electron mis à jour avec les derniers correctifs ; l'exécutable ne peut plus être détourné.
 
 **1.7.4** — Film de présentation refait : le plan sur la prière présente désormais « les preuves du Coran et de la Sunna ».
 
