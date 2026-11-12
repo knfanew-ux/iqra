@@ -94,6 +94,8 @@ function downloadUrl(release, version) {
 
 let checking = false;
 async function checkForUpdate() {
+  // Version Microsoft Store : c'est le Store qui installe les mises à jour, rien à proposer ici
+  if (process.windowsStore) return;
   if (checking || !mainWindow) return;
   checking = true;
   try {
