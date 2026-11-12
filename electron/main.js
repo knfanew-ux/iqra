@@ -4,6 +4,25 @@ const fs = require('fs');
 
 let mainWindow = null;
 
+const APP_DIR = path.join(__dirname, 'src');
+
+// Vrai si l'adresse désigne un fichier de l'application elle-même
+function isAppUrl(url) {
+  try {
+    const u = new URL(url);
+    if (u.protocol !== 'file:') return false;
+    const p = path.normalize(decodeURIComponent(u.pathname).replace(/^\/([A-Za-z]:)/, '$1'));
+    return p.toLowerCase().startsWith(APP_DIR.toLowerCase() + path.sep);
+  } catch { return false; }
+}
+
+// N'ouvre dans le navigateur que les adresses https (jamais file:, smb:, ms-… ni autre protocole)
+function openSafe(url) {
+  try {
+    if (new URL(url).protocol === 'https:') shell.openExternal(url);
+  } catch {}
+}
+
 function createWindow() {
   const win = new BrowserWindow({
     width: 1280,
@@ -21,10 +40,17 @@ function createWindow() {
     },
   });
 
-  // Les liens externes s'ouvrent dans le navigateur par défaut
+  // Les liens externes s'ouvrent dans le navigateur par défaut (adresses https uniquement)
   win.webContents.setWindowOpenHandler(({ url }) => {
-    shell.openExternal(url);
+    openSafe(url);
     return { action: 'deny' };
+  });
+  // La fenêtre ne quitte jamais l'application : tout autre lien part dans le navigateur
+  win.webContents.on('will-navigate', (e, url) => {
+    if (!isAppUrl(url)) { e.preventDefault(); openSafe(url); }
+  });
+  win.webContents.on('will-redirect', (e, url) => {
+    if (!isAppUrl(url)) e.preventDefault();
   });
 
   win.loadFile(path.join(__dirname, 'src', 'index.html'));
@@ -94,7 +120,7 @@ async function checkForUpdate() {
       cancelId: 1,
       noLink: true,
     });
-    if (response === 0) shell.openExternal(downloadUrl(release, latest));
+    if (response === 0) openSafe(downloadUrl(release, latest));
     else if (response === 2) writePrefs({ ...prefs, ignoree: latest });
   } catch {
     // Pas de connexion ou GitHub injoignable : on réessaiera plus tard, sans déranger
@@ -108,9 +134,13 @@ app.whenReady().then(() => {
 
   // Autoriser uniquement le micro (pour s'enregistrer et comparer sa récitation)
   session.defaultSession.setPermissionRequestHandler((wc, permission, callback) => {
-    callback(permission === 'media');
+    callback(permission === 'media' && isAppUrl(wc.getURL()));
   });
-  session.defaultSession.setPermissionCheckHandler((wc, permission) => permission === 'media');
+  session.defaultSession.setPermissionCheckHandler((wc, permission) => permission === 'media' && !!wc && isAppUrl(wc.getURL()));
+  // Aucune page ne peut créer de fenêtre ou de vue web supplémentaire
+  app.on('web-contents-created', (_e, contents) => {
+    contents.on('will-attach-webview', (ev) => ev.preventDefault());
+  });
 
   createWindow();
   app.on('activate', () => {

@@ -1,5 +1,6 @@
 import * as ResEdit from 'resedit';
 import fs from 'fs';
+const [vA, vB, vC] = JSON.parse(fs.readFileSync('package.json', 'utf8')).version.split('.').map(Number);
 const exePath = 'dist/win-unpacked/Iqra.exe';
 const exe = ResEdit.NtExecutable.from(fs.readFileSync(exePath), { ignoreCert: true });
 const res = ResEdit.NtExecutableResource.from(exe);
@@ -13,7 +14,7 @@ if (vi) {
     ProductName: 'Iqra', FileDescription: 'Iqra — Apprendre à lire le Coran', CompanyName: "Sensei Dev",
     LegalCopyright: 'Iqra', OriginalFilename: 'Iqra.exe', InternalName: 'Iqra',
   });
-  vi.setFileVersion(1, 7, 0, 0, 1033); vi.setProductVersion(1, 7, 0, 0, 1033);
+  vi.setFileVersion(vA, vB, vC, 0, 1033); vi.setProductVersion(vA, vB, vC, 0, 1033);
   vi.outputToResourceEntries(res.entries);
 }
 res.outputResource(exe);
