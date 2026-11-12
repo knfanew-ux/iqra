@@ -1,8 +1,10 @@
 """Fabrique le paquet Microsoft Store (MSIX, x64) d'Iqra sous Linux, avec openappx.
 
 Usage :
-  python3 build/make-msix.py --name <Nom du paquet> --publisher "CN=..." \
-      [--publisher-name "Sensei Dev"] [--display-name Iqra] [--out dist/Iqra-1.7.5.msix]
+  python3 build/make-msix.py --name Sensei-Dev.Iqra-ApprendreleCoran \
+      --publisher "CN=9E2F1C2C-E475-4BAA-80F8-A7077B3BC189"
+
+Produit Store 9P5CCMBNB723 « Iqra - Apprendre le Coran » (éditeur affiché : Sensei-Dev).
 
 --name et --publisher se lisent dans Partner Center, page « Identité du produit » de l'application
 (Package/Identity/Name et Package/Identity/Publisher). La version vient de package.json (x.y.z.0).
@@ -15,8 +17,9 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 p = argparse.ArgumentParser()
 p.add_argument('--name', required=True)
 p.add_argument('--publisher', required=True)
-p.add_argument('--publisher-name', default='Sensei Dev')
-p.add_argument('--display-name', default='Iqra')
+p.add_argument('--publisher-name', default='Sensei-Dev')
+p.add_argument('--display-name', default='Iqra - Apprendre le Coran')
+p.add_argument('--tile-name', default='Iqra')
 p.add_argument('--app', default=str(ROOT / 'dist' / 'win-unpacked'))
 p.add_argument('--assets', default=str(ROOT / 'build' / 'store-assets'))
 p.add_argument('--out')
@@ -49,7 +52,7 @@ manifest = f"""<?xml version="1.0" encoding="utf-8"?>
   </Resources>
   <Applications>
     <Application Id="Iqra" Executable="Iqra.exe" EntryPoint="Windows.FullTrustApplication">
-      <uap:VisualElements DisplayName="{escape(a.display_name)}" Description="Apprendre à lire le Coran"
+      <uap:VisualElements DisplayName="{escape(a.tile_name)}" Description="Apprendre à lire le Coran"
           BackgroundColor="transparent" Square150x150Logo="Assets\\Square150x150Logo.png" Square44x44Logo="Assets\\Square44x44Logo.png">
         <uap:DefaultTile Wide310x150Logo="Assets\\Wide310x150Logo.png" Square71x71Logo="Assets\\SmallTile.png" Square310x310Logo="Assets\\LargeTile.png"/>
       </uap:VisualElements>
