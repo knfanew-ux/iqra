@@ -11,9 +11,17 @@ Application Windows pour apprendre à lire le Coran avec la bonne prononciation,
 
 Une application **Sensei Dev**.
 
-## Télécharger (version 1.7.5)
+## Télécharger
 
-Choisissez la version qui correspond à votre ordinateur :
+### Depuis le Microsoft Store (recommandé)
+
+**[⬇ Obtenir Iqra sur le Microsoft Store](https://apps.microsoft.com/detail/9p5ccmbnb723)** — gratuit.
+
+L'installation se fait en un clic, sans avertissement de Windows, et les mises à jour arrivent par le Store.
+
+### Installateur direct (version 1.7.5)
+
+Si vous n'utilisez pas le Microsoft Store, choisissez la version qui correspond à votre ordinateur :
 
 | Ordinateur | Télécharger | Taille |
 | --- | --- | --- |
@@ -25,6 +33,8 @@ Choisissez la version qui correspond à votre ordinateur :
 Windows 10 ou 11. Internet est nécessaire pour l'audio des versets et des mots du Coran. Le texte, les leçons, la prière, les invocations et leur audio mot par mot fonctionnent hors ligne.
 
 ## Installation
+
+Depuis le Microsoft Store, cliquez sur **Obtenir** : il n'y a rien d'autre à faire. Avec l'installateur direct :
 
 1. Téléchargez et ouvrez l'installateur.
 2. Si Windows affiche « Windows a protégé votre ordinateur », cliquez sur **Informations complémentaires**, puis **Exécuter quand même** (application récente non signée).
